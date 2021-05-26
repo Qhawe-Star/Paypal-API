@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bootstrap/home page</title>
+</head><style>
+    body{
+       background-color: rgb(156, 193, 248);
+    
+    }
+  
+    a:hover {
+      color: rgb(220, 1, 1);
+            }
+            ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(255, 251, 251);
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a { font-family: 'Courier New', Courier, monospace;
+      display: block;
+      color: rgb(158, 138, 138);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;}
+
+.middle,li{display: inline;}
+
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; 
+ 
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  flex: 50%;
+  
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  flex: 75%; flex: 25%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+  font-size: 24px;
+ 
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  
+}
+
+.btn {
+  background-color: #588cfc;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #4477d5;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+button{
+    color:tomato; 
+    width: 1123px;
+    text-decoration: none;
+    font-size: 20px;
+    align-content: center;
+}
+    </style>
+    <body>
+    <div class="top">
+        <nav>
+            <ul>
+             <li><a href="index.html">Log Out</a></li>
+            <!---- <li><a href="sandbox.html">PayPal</a></li>--->
+            </ul>
+        </nav>
+    </div><br>
+
+
+
+
+
+    
+
+
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+            
+              <div class="row">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Name">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="name@example.com">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="Residential">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="Within your location">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="e.g CPT">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="00000">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-50">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <p>Capitec</p>
+                  <p>Visa</p>
+                  <p>Nedbank</p>
+                  <p>Mastercard</p>
+                  <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="Name">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="Month">
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">Exp Year</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="0000">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="000">
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing address
+              </label>
+              <h1>PayPal is the safer; easier way to pay</h1>
+             
+            </form>
+          </div>
+        </div>
+        <div class="col-25">
+          <div class="container">
+            <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+            <p><a href="#">Computer</a> <span class="price"> PayPal charge $15</span></p>
+            <p><a href="#">Laptop</a> <span class="price">PayPal charge $5</span></p>
+            <p><a href="#">Cellphone</a> <span class="price">PayPal charge $8</span></p>
+            <p><a href="#">Monitor</a> <span class="price">PayPal charge $2</span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>PayPal Balance $30</b></span></p>
+          </div>
+        </div>
+      </div>
+      <button><a href="index.html">Checkout</a></button> 
+      </body>
+      </html>
+      
+
+
+
+
+</body>
+  
+</html>
